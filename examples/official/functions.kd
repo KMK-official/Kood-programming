@@ -1,0 +1,31 @@
+* Make a function called 'greet'.
+function greet
+    * The variable 'name' is a variable made later for the greet function and add text to the screen.
+    m_item:text="hi, I'm " + name
+    addline:text
+
+* This is where the 'name' variable is assigned to the value "Robert" and the greet function is being called.
+item:name="Robert"
+run_function:greet
+
+* Makes a variable called 'your_name' witht the value of "".
+item:your_name=""
+
+* Make a loop of asking "what is your name :  " until the user puts something so the user doesn't just click enter.
+while your_name = ""::
+    getline:your_name="what is your name :  "
+
+* Use the m_item function (math item) to merge the text "Hi, " and the variable 'your_name' and add that value to the 'text' variable.
+m_item:text="Hi, " + your_name
+
+* Add the variable 'text' to the screen.
+addline:text
+
+* Use the '@all_vars' system variable to list all the variables.
+addline:@all_vars
+
+* Using the 'timer' command, you could wait a certain amount of seconds without doing anything, in this case it's only waiting 1 second.
+timer:1
+* When you use the 'exit' command, you exit the code and don't run anything more.
+exit
+addline:"ABC"

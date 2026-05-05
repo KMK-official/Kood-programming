@@ -1,0 +1,25 @@
+* Using the 'getline' function to get user input and use the 'make_file' function to make the file "my_text.txt" and add the contents of the user.
+getline:file_content_input="What is your text to put in your file :  "
+make_file:"my_text.txt"=file_content_input
+
+* Read the file "my_text.txt" and put the contents in the variable named 'my_text.txt' because thats the file name.
+read_file:"my_text.txt"
+
+* Merge the text "the file contents for my_text.txt is :  " and the variable 'my_text.txt' because the variable 'my_text.txt' is where the file contents were stored and add the merged text to the screen.
+m_item:my_file_contents="the file contents for my_text.txt is :  " + my_text.txt
+addline:my_file_contents
+
+* Get user input on "What is your text to put in your file :  " and append that value to the existing "my_text.txt" file. Then read it, merge "the file contents for my_text.txt is :  " and the variable 'my_text.txt' and add that text to the screen.
+getline:new_contents="What is your text to put in your file :  "
+add_file:"my_text.txt"=new_contents
+read_file:"my_text.txt"
+m_item:my_file_contents="the file contents for my_text.txt is :  " + my_text.txt
+addline:my_file_contents
+
+
+* Do what was done in the last code, but instead of using the 'add_file' function, use the 'write_file' function to overwrite instead of extend the file.
+getline:file_content_input="What is your text to put in your file after erasing contents :  "
+write_file:"my_text.txt"=file_content_input
+read_file:"my_text.txt"
+m_item:my_file_contents="the file contents for my_text.txt is :  " + my_text.txt
+addline:my_file_contents

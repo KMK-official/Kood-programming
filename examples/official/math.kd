@@ -1,0 +1,40 @@
+* Get all user inputs for the first nummber, the math operator, and the second number.
+getline:num1="what is your first number :  "
+getline:operator="what is your operator (+,-,/,*) :  "
+getline:num2="what is your second number :  "
+
+
+* Make the 'answer' variable's default value to 0 and translate the users first and second number from word form to number form.
+item:answer=0
+conv:str-num:num1
+conv:str-num:num2
+
+* Clear the screen from text.
+clear
+
+* Check which math operation did the user pick, +, -, /, or *.
+if operator = "+"::
+    m_item:answer=num1 + num2
+if operator = "-"::
+    m_item:answer=num1 - num2
+if operator = "/"::
+    m_item:answer=num1 / num2
+if operator = "*"::
+    m_item:answer=num1 * num2
+
+* Add the answer to the screen.
+addline:answer
+
+* Make a random number from 0 to 100.
+random:num3=0,100
+* Use the 'conv' function to convert the random number into text.
+conv:num-str:num3
+* Merge the text "The random number from 0 to 100 is :  " and the 'num3' variable (This is why you need to convert the number to text because you can't merge text with numbers, only numbers with numbers and text with text) and add that text to the screen.
+m_item:num4="The random number from 0 to 100 is :  " + num3
+addline:num4
+
+* Get the length of the text of the variable 'num4'. Then store it in the variable 'num5'. Then merge the text "The lenth of the current text is :  " and the 'num5' variable. Lastly, add that value to the variable 'num6', and add it to the screen.
+len:num5=num4
+conv:num-str:num5
+m_item:num6="The lenth of the current text is :  " + num5
+addline:num6
