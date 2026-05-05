@@ -1,0 +1,7 @@
+item:loop_count=5
+
+while loop_count > 0::
+    addline:loop_count
+    timer:1
+    m_item:loop_count=loop_count - 1
+addline:"bye!?"

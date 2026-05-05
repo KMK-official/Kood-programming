@@ -1,0 +1,40 @@
+addline:"hi"
+timer:1
+clear
+item:my_var="hi"
+getline:text="what is the code :  "
+
+if "Abc" = text::
+    addline:"hellooooooo"
+
+getline:choice="choice 1(name test) or 2(age test)"
+
+if choice = "1":
+    run_function:get_name
+if choice = "2":
+    run_function:get_age
+
+timer:1
+
+function get_age
+    clear
+    getline:age="what is your age :  "
+
+    conv:str-num:age
+
+    if age < 18::
+        addline:"U are a kid"
+        addline:"Yay"
+    if age > 17::
+        addline:"U are a teen/adult"
+
+function get_name
+    getline:name="what is your name :  "
+
+    m_item:name= "hi," + name
+    
+    if name ne ""::
+        addline:"hi, "
+
+
+addline:"RRRRR SDIBIDI DOP DOP YES YES RRRRR SDIBIDI DOP DOP ME ME"
