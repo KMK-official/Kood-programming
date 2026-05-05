@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Kood programming</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body style="background-color: bisque;">
+    <div style="border-radius: 50px; display: flex; align-items: center; background-color: rgba(119, 23, 119, 0.785);">
+        <h1 style="margin-left: 60px;">Kood programming</h1>
+        <img style="margin-left: 30px;" width="50px" height="50px" src="logo.png">
+    </div>
+
+    <h1 style="text-align: center;">Download</h1>
+
+    
+    <div style="display: flex; justify-content: center;">
+        <a href="kood-installer.exe" download="kood-installer.exe"><button style="border-radius: 30px; background-color: cadetblue;"><h1 style="text-align: center;">-Install Kood-</h1></button></a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <hr style="height: 20px; background-color: #000000;">
+
+    <br>
+    <br>
+    <br>
+
+    <h1 style="text-align: center;">Quick start</h1>
+
+    <h2>How To Install</h2>
+
+    <h3> Requirements </h3>
+    <p><b>Computer</b> : Windows 11, Windows 10</p>
+    <p><b>Applications</b> : <a href="#Kood-installer">Kood Programming</a>, <a href="#KIDE-installer">Kide</a></p>
+
+    <h3 id="Kood-installer">Kood Programming</h3>
+    <p>Go to kood-programming.netlify.app and click "install kood", and kood-installer should get installed. Once you have installed kood-installer, go to your downloads and double-click it. Read the license and click "I accept the agreement" and click next. If "Create a desktop shortcut" isn't checked then check it and click next. Click install and wait for Kood programming to be installed. Lastly, click Finish. To verify if kood programming is installed click ⊞ + R, type `cmd`, and click enter. Copy and paste this command into the black screen `kood -v` and it should print the version of Kood.</p>
+
+    <h3 id="KIDE-installer">KIDE</h3>
+    <p>Go to <a href="https://kood-programming.netlify.app/kide">kood-programming.netlify.app/kide</a> and click "install kide", and kide-installer should get installed. Once you have the kide installer, go to your downloads and double-click it. Click "Install for me only (rrecommended)". Read the license and click "I accept the agreement" and click for the next.  Then check the boxe and click next. Click install and wait for Kide to be installed. Lastly, click Finish.</p>
+  
+  
+  
+    <h2>How To Uninstall</h2>
+
+    <h3>Kood Programming</h3>
+    Go to your settings app and search "Installed apps", select "Installed apps" and search for "Kood version x.x.x" and click the 3 dots beside it. Click "Uninstall" and confirm your uninstallation.
+
+    <h3>Kide</h3>
+    <p>Go to your settings app and search "Installed apps", select "Installed apps" and search for "Kide version x.x.x" and click the 3 dots beside it. Click "Uninstall" and confirm your uninstallation.</p>
+    
+    
+    
+    <h2>Hello World</h2>
+
+    <h3>Description</h3>
+    <p>how to make a hello world program. A hello world program is a program were it shows the text "Hello World!" on the screen. This is the simplest program you could make in a programming language. Many tutorials normally start with a hello world program because of it being very generic and simple. So lets make our first program in the Kood programming language.</p>
+
+
+    <h3>Start A Project</h3>
+    <p>On your desktop make a folder called "My Kood Projects", then open it and make a file called "main.kd" (NOTE: you must have "show file extnsions" enabled). Then, in Kide, open the file and add the following code:</p>
+    <pre><code>
+    addline:"Hello World!"
+    </code><pre>
+
+    <p>Now, you need to click the Run button, and it should add the text "hello world" to the black window beside kide. The reason main.kd ends in `.kd` and not `.txt` or `.docx` is because a Kood code file ends with `.kd`. In Kide click `Ctrl` + `` ` `` and a black screen will pop out from the bottom of the Kide window. Click once on the black popup and type the following `kood main.kd`.</p>
+    
+    
+    
+    <h2>Math</h2>
+
+    <h3>Description</h3>
+    <p>how to make a math program. This math program is a program were it does some simple math on the screen. This is the one more of the simplest program you could make in a programming language. So lets make our second program in the Kood programming language.</p>
+
+
+    <h3>Start The Project</h3>
+    Do the same steps but make the file name as `math.kd`, right-click the panel in the center and click and add the following code:
+    <pre><code>
+    * Get all user inputs for the first nummber, the math operator, and the second number.
+    getline:num1="what is your first number :  "
+    getline:operator="what is your operator (+,-,/,*) :  "
+    getline:num2="what is your second number :  "
+
+
+    * Make the 'answer' variable's default value to 0 and translate the users first and second number from word form to number form.
+    item:answer=0
+    conv:str-num:num1
+    conv:str-num:num2
+
+    * Clear the screen from text.
+    clear
+
+    * Check which math operation did the user pick, +, -, /, or *.
+    if operator = "+"::
+        m_item:answer=num1 + num2
+    if operator = "-"::
+        m_item:answer=num1 - num2
+    if operator = "/"::
+        m_item:answer=num1 / num2
+    if operator = "*"::
+        m_item:answer=num1 * num2
+
+    * Add the answer to the screen.
+    addline:answer
+
+    * Make a random number from 0 to 100.
+    random:num3=0,100
+    * Use the 'conv' function to convert the random number into text.
+    conv:num-str:num3
+    * Merge the text "The random number from 0 to 100 is :  " and the 'num3' variable (This is why you need to convert the number to text because you can't merge text with numbers, only numbers with numbers and text with text) and add that text to the screen.
+    m_item:num4="The random number from 0 to 100 is :  " + num3
+    addline:num4
+
+    * Get the length of the text of the variable 'num4'. Then store it in the variable 'num5'. Then merge the text "The lenth of the current text is :  " and the 'num5' variable. Lastly, add that value to the variable 'num6', and add it to the screen.
+    len:num5=num4
+    conv:num-str:num5
+    m_item:num6="The lenth of the current text is :  " + num5
+    addline:num6
+    </code></pre>
+    
+    
+    
+    <h2>Functions</h2>
+
+    <h3>Description</h3>
+    <p>how to make a simple program to make functions. This program is a program were it does a simple function. This is another simple program you could make in a programming language. So lets make our third program in the Kood programming language.</p>
+
+
+    <h3>Start The Project</h3>
+    Do the same steps but make the file name as `functions.kd`, right-click the panel in the center and click and add the following code:
+    <pre><code>
+    * Make a function called 'greet'.
+    function greet
+        * The variable 'name' is a variable made later for the greet function and add text to the screen.
+        m_item:text="hi, I'm " + name
+        addline:text
+
+    * This is where the 'name' variable is assigned to the value "Robert" and the greet function is being called.
+    item:name="Robert"
+    run_function:greet
+
+    * Makes a variable called 'your_name' witht the value of "".
+    item:your_name=""
+
+    * Make a loop of asking "what is your name :  " until the user puts something so the user doesn't just click enter.
+    while your_name = ""::
+        getline:your_name="what is your name :  "
+
+    * Use the m_item function (math item) to merge the text "Hi, " and the variable 'your_name' and add that value to the 'text' variable.
+    m_item:text="Hi, " + your_name
+
+    * Add the variable 'text' to the screen.
+    addline:text
+
+    * Use the '@all_vars' system variable to list all the variables.
+    addline:@all_vars
+
+    * Using the 'timer' command, you could wait a certain amount of seconds without doing anything, in this case it's only waiting 1 second.
+    timer:1
+    * When you use the 'exit' command, you exit the code and don't run anything more.
+    exit
+    addline:"ABC"
+    </code></pre>
+    
+    
+    
+    <h2>File management</h2>
+
+    <h3>Description</h3>
+    <p>how to make a file management program. This file management program is a program were it does some simple file management like creating files, writing to them and reading them. This is the one of the medium-level programs you could make in a programming language. So lets make our fourth program in the Kood programming language.</p>
+
+
+    <h3>Start The Project</h3>
+    <p>Do the same steps but make the file name as `math.kd`, right-click the panel in the center and click and add the following code:</p>
+    <pre><code>
+    * Using the 'getline' function to get user input and use the 'make_file' function to make the file "my_text.txt" and add the contents of the user.
+    getline:file_content_input="What is your text to put in your file :  "
+    make_file:"my_text.txt"=file_content_input
+
+    * Read the file "my_text.txt" and put the contents in the variable named 'my_text.txt' because thats the file name.
+    read_file:"my_text.txt"
+
+    * Merge the text "the file contents for my_text.txt is :  " and the variable 'my_text.txt' because the variable 'my_text.txt' is where the file contents were stored and add the merged text to the screen.
+    m_item:my_file_contents="the file contents for my_text.txt is :  " + my_text.txt
+    addline:my_file_contents
+
+    * Get user input on "What is your text to put in your file :  " and append that value to the existing "my_text.txt" file. Then read it, merge "the file contents for my_text.txt is :  " and the variable 'my_text.txt' and add that text to the screen.
+    getline:new_contents="What is your text to put in your file :  "
+    add_file:"my_text.txt"=new_contents
+    read_file:"my_text.txt"
+    m_item:my_file_contents="the file contents for my_text.txt is :  " + my_text.txt
+    addline:my_file_contents
+
+
+    * Do what was done in the last code, but instead of using the 'add_file' function, use the 'write_file' function to overwrite instead of extend the file.
+    getline:file_content_input="What is your text to put in your file after erasing contents :  "
+    write_file:"my_text.txt"=file_content_input
+    read_file:"my_text.txt"
+    m_item:my_file_contents="the file contents for my_text.txt is :  " + my_text.txt
+    addline:my_file_contents
+    </code></pre>
+
+    
+</body>
+</html>
